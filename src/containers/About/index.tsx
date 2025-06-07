@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section>
       <Title fontSize={16}>Sobre mim</Title>
-      <Paragraph type="secondary">
+      <Paragraph type="primary">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
         similique eveniet fugit nulla maxime autem quibusdam architecto
         inventore animi. Obcaecati excepturi vero soluta debitis quis, alias
