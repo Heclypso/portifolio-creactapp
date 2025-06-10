@@ -6,13 +6,18 @@ export const Description = styled(P)`
   margin-bottom: 40px;
 `
 
-export const ThemeButton = styled.button`
+type ThemeButton = {
+  children: React.ReactNode
+  onClick: () => void
+}
+
+export const ThemeButton = styled.button<ThemeButton>`
   border-radius: 12px;
   padding: 8px;
-  color: #eee;
+  color: ${(props) => props.theme.backgroundColor};
   font-size: 10px;
   font-weight: bold;
-  background-color: #282a35;
+  background-color: ${(props) => props.theme.primaryColor};
   cursor: pointer;
 `
 export const SidebarContainer = styled.div`
@@ -20,4 +25,9 @@ export const SidebarContainer = styled.div`
   top: 80px;
   left: 0;
   height: 382px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
 `
