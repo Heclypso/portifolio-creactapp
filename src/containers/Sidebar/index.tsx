@@ -10,17 +10,15 @@ type Props = {
 const Sidebar = (props: Props) => {
   return (
     <SidebarContainer>
-      <aside>
-        <Avatar />
-        <Title fontSize={20}>Gabriel Munhak</Title>
-        <Paragraph type="secondary" fontSize={16}>
-          heclypso
-        </Paragraph>
-        <Description type="primary" fontSize={12}>
-          Engenheiro front-end
-        </Description>
-        <ThemeButton onClick={props.switchTheme}>Trocar tema</ThemeButton>
-      </aside>
+      <Avatar />
+      <Title fontSize={20}>Gabriel Munhak</Title>
+      <Paragraph type="secondary" fontSize={16}>
+        @heclypso
+      </Paragraph>
+      <Description type="primary" fontSize={14}>
+        Engenheiro front-end
+      </Description>
+      <ThemeButton onClick={props.switchTheme}>Trocar tema</ThemeButton>
     </SidebarContainer>
   )
 }
