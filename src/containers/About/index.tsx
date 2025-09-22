@@ -7,10 +7,29 @@ const About = () => {
     <section>
       <Title fontSize={16}>Sobre mim</Title>
       <Paragraph type="primary">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-        similique eveniet fugit nulla maxime autem quibusdam architecto
-        inventore animi. Obcaecati excepturi vero soluta debitis quis, alias
-        nemo est facilis harum?
+        Olá, eu me chamo Gabriel e tenho 21 anos
+        <br />
+        <br />
+        Tenho um perfil multidisciplinar construído a partir de minhas
+        experiências anteriores em áreas voltadas ao ramo da programação e
+        demandas empresariais, onde pude desenvolver minha capacidade analítica,
+        empatia e trabalho em equipe, os quais considero pontos fortes que
+        poderei utilizar em possíveis desafios oferecidos pela carreira.
+        <br />
+        <br />
+        Estou expandindo meu aprendizado e construindo meu portfólio com
+        projetos práticos. Atualmente, tenho habilidades em:
+        <br />
+        <br />
+        Softwares de Design como o Figma
+        <br />
+        Softwares de Programação como o Visual Studio Code
+        <br />
+        Ferramentas que auxiliam no desenvolvimento como Git e GitHub
+        <br />
+        Mapeamento das necessidades do usuário
+        <br />
+        Construção de interfaces multiplataformas
       </Paragraph>
       <GithubSection>
         <img src="https://github-readme-stats.vercel.app/api?username=heclypso&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" />

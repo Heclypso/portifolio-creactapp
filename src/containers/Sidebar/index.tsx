@@ -16,7 +16,8 @@ const Sidebar = (props: Props) => {
         @heclypso
       </Paragraph>
       <Description type="primary" fontSize={14}>
-        Engenheiro front-end
+        Engenheiro front-end <br /> <br />
+        Técnico em análise e desenvolvimento de sistemas
       </Description>
       <ThemeButton onClick={props.switchTheme}>Trocar tema</ThemeButton>
     </SidebarContainer>

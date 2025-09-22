@@ -1,12 +1,19 @@
+import Button from '../Button'
 import Paragraph from '../Paragraph'
 import Title from '../Title'
-import { Card, LinkButton } from './styles'
+import { Card } from './styles'
 
-const Project = () => (
+type Props = {
+  title: string
+  description: string
+  html_url: string
+}
+
+const Project = ({ title, description, html_url }: Props) => (
   <Card>
-    <Title>Projeto Lista de tarefas</Title>
-    <Paragraph type="secondary">Lista de tarefas feita com vue js</Paragraph>
-    <LinkButton>Visualizar</LinkButton>
+    <Title>{title}</Title>
+    <Paragraph type="secondary">{description}</Paragraph>
+    <Button html_url={html_url} />
   </Card>
 )
 
