@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const Card = styled.div`
-  border: 1px solid ${(props) => props.theme.borderColor};
   padding: 16px;
+  height: 208px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme.tertiaryColor};
 `

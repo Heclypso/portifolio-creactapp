@@ -24,15 +24,13 @@ const Projects = () => {
 
   return (
     <section>
-      <Title fontSize={16}>Projetos</Title>
+      <Title fontSize={20} marginBottom={32}>
+        Projetos Favoritos
+      </Title>
       <List>
         {repos.map((project: Project) => (
           <li key={project.id}>
-            <Project
-              title={project.name}
-              description={project.description}
-              html_url={project.html_url}
-            />
+            <Project title={project.name} html_url={project.html_url} />
           </li>
         ))}
       </List>

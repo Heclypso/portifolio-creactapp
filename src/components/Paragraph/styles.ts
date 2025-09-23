@@ -7,5 +7,6 @@ export const P = styled.p<Props>`
     props.type === 'primary'
       ? props.theme.primaryColor
       : props.theme.secondaryColor};
-  line-height: 22px;
+  line-height: 18px;
+  font-weight: 500;
 `

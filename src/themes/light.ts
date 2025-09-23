@@ -1,9 +1,12 @@
 const LightTheme = {
   primaryColor: '#282a35',
   secondaryColor: '#949494',
+  tertiaryColor: '#ecececff',
   backgroundColor: '#fff',
-  buttonBackgroundColor: '#4476bf',
-  borderColor: '#c1c1c1'
+  textColor: '#fff',
+  quaternaryColor: '#4476bf',
+  buttonTextColor: '#fff',
+  descriptionColor: '#282a35'
 }
 
 export default LightTheme

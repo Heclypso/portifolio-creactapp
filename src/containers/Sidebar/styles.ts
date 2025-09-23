@@ -2,8 +2,11 @@ import styled from 'styled-components'
 import { P } from '../../components/Paragraph/styles'
 
 export const Description = styled(P)`
-  margin-top: 24px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 64px;
+  text-align: center;
+  font-size: 20px;
+  color: ${(props) => props.theme.descriptionColor};
 `
 
 type ThemeButton = {
@@ -13,18 +16,24 @@ type ThemeButton = {
 
 export const ThemeButton = styled.button<ThemeButton>`
   border-radius: 12px;
-  padding: 8px;
-  color: ${(props) => props.theme.backgroundColor};
-  font-size: 10px;
-  font-weight: bold;
-  background-color: ${(props) => props.theme.primaryColor};
+  padding: 8px 12px;
+  color: ${(props) => props.theme.textColor};
+  font-size: 14px;
+  font-weight: 500;
+  background-color: ${(props) => props.theme.quaternaryColor};
   cursor: pointer;
+  border: none;
 `
 export const SidebarContainer = styled.div`
   position: sticky;
-  top: 80px;
+  top: 0;
   left: 0;
-  height: 382px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme.tertiaryColor};
 
   @media (max-width: 768px) {
     margin-bottom: 40px;

@@ -3,7 +3,9 @@ import { Props } from '.'
 
 export const Titulo = styled.h3<Props>`
   color: ${(props) => props.theme.primaryColor};
-  font-size: ${(props) => (props.fontSize ? props.fontSize + 'px' : '14px')};
-  font-weight: bold;
-  margin-bottom: 16px;
+  font-size: ${({ fontSize }) => (fontSize ? fontSize + 'px' : '14px')};
+  font-weight: black;
+  margin-bottom: ${({ marginBottom }) =>
+    marginBottom ? marginBottom + 'px' : '0'};
+  text-align: center;
 `

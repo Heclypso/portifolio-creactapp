@@ -1,11 +1,15 @@
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import { GithubSection } from './styles'
+import Tags from '../../components/Tags'
+import Button from '../../components/Button'
 
 const About = () => {
   return (
     <section>
-      <Title fontSize={16}>Sobre mim</Title>
+      <Title fontSize={20} marginBottom={32}>
+        Sobre mim
+      </Title>
       <Paragraph type="primary">
         Olá, eu me chamo Gabriel e tenho 21 anos
         <br />
@@ -35,6 +39,8 @@ const About = () => {
         <img src="https://github-readme-stats.vercel.app/api?username=heclypso&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" />
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=heclypso&layout=compact&langs_count=7&theme=dracula" />
       </GithubSection>
+      <Tags />
+      <Button content="Expandir" />
     </section>
   )
 }

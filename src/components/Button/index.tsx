@@ -1,13 +1,20 @@
-import { LinkButton } from './styles'
+import { ButtonElement } from './styles'
 
 type Props = {
-  html_url: string
+  html_url?: string
+  content: string
+  href?: string
 }
 
-const Button = ({ html_url }: Props) => (
-  <LinkButton target="_blanc" href={html_url}>
-    Leia mais
-  </LinkButton>
-)
+const Button = ({ html_url, content, href }: Props) => {
+  if (href) {
+    return (
+      <ButtonElement as="a" target="_blanc" href={html_url}>
+        {content}
+      </ButtonElement>
+    )
+  }
 
+  return <ButtonElement as="button">{content}</ButtonElement>
+}
 export default Button
