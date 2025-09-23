@@ -2,7 +2,6 @@ import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import { GithubSection } from './styles'
 import Tags from '../../components/Tags'
-import Button from '../../components/Button'
 
 const About = () => {
   return (
@@ -40,7 +39,6 @@ const About = () => {
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=heclypso&layout=compact&langs_count=7&theme=dracula" />
       </GithubSection>
       <Tags />
-      <Button content="Expandir" />
     </section>
   )
 }

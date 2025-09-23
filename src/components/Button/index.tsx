@@ -4,9 +4,10 @@ type Props = {
   html_url?: string
   content: string
   href?: string
+  onClick: () => void
 }
 
-const Button = ({ html_url, content, href }: Props) => {
+const Button = ({ html_url, content, href, onClick }: Props) => {
   if (href) {
     return (
       <ButtonElement as="a" target="_blanc" href={html_url}>
@@ -15,6 +16,10 @@ const Button = ({ html_url, content, href }: Props) => {
     )
   }
 
-  return <ButtonElement as="button">{content}</ButtonElement>
+  return (
+    <ButtonElement onClick={onClick} as="button">
+      {content}
+    </ButtonElement>
+  )
 }
 export default Button
