@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const ButtonElement = styled.div`
-  color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.primaryTextColor};
   font-size: 14;
-  background-color: ${(props) => props.theme.tertiaryColor};
+  background-color: ${(props) => props.theme.secondaryColor};
   text-decoration: none;
   padding: 8px;
   display: inline-block;

@@ -11,7 +11,7 @@ const EstiloGlobal = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => (props.theme as Theme).backgroundColor};
+    background-color: ${(props) => (props.theme as Theme).primaryColor};
   }
 
   main {

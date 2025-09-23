@@ -1,12 +1,13 @@
 const LightTheme = {
-  primaryColor: '#282a35',
-  secondaryColor: '#949494',
-  tertiaryColor: '#ecececff',
-  backgroundColor: '#fff',
-  textColor: '#fff',
-  quaternaryColor: '#4476bf',
-  buttonTextColor: '#fff',
-  descriptionColor: '#282a35'
+  primaryColor: '#000000',
+  secondaryColor: '#0C0C0C',
+  tertiaryColor: '#3A3A3A',
+  primaryTextColor: '#FCFCFC',
+  secondaryTextColor: '#D7D7D7',
+  tertiaryTextColor: '#949494',
+  overlayPrimaryColor: 'rgba(28, 28, 28, 0.8)',
+  overlaySecondaryColor: 'rgba(20, 20, 20, 0.6);',
+  footerColor: '#1C1C1C'
 }
 
 export default LightTheme

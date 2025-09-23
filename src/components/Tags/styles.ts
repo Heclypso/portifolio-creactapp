@@ -5,7 +5,7 @@ type Props = {
 }
 
 export const TagContainer = styled.div`
-  background-color: ${(props) => props.theme.tertiaryColor};
+  background-color: ${(props) => props.theme.secondaryColor};
   display: flex;
   gap: 14px;
   padding: 16px;
@@ -15,8 +15,8 @@ export const TagContainer = styled.div`
 
 export const Tag = styled.div<Props>`
   height: 22px;
-  color: ${(props) => props.theme.textColor};
-  background-color: ${(props) => props.theme.quaternaryColor};
+  color: ${(props) => props.theme.primaryTextColor};
+  background-color: ${(props) => props.theme.tertiaryColor};
   font-size: 16px;
   font-weight: 500;
   padding: 8px 12px;
@@ -28,6 +28,6 @@ export const Tag = styled.div<Props>`
 export const TagDecoration = styled.div`
   width: 19px;
   height: 19px;
-  background-color: ${(props) => props.theme.descriptionColor};
+  background-color: ${(props) => props.theme.secondaryTextColor};
   border-radius: 9.5px;
 `
