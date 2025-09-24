@@ -12,7 +12,7 @@ const Sidebar = (props: Props) => {
   return (
     <SidebarContainer>
       <Avatar />
-      <Title marginBottom={6} type="primary">
+      <Title $marginBottom={6} type="primary">
         Gabriel Munhak
       </Title>
       <Paragraph type="secondary" fontSize={16}>

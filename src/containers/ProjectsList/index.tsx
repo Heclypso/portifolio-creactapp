@@ -1,61 +1,31 @@
-import { useEffect, useState } from 'react'
-
 import Card from '../../components/Card'
 import Title from '../../components/Title'
 
-import { List } from './styles'
+import background from '../../assets/generic_backgrounds/blue_pattern.jpg'
 
-type Project = {
-  id: number
-  name: string
-  description: string
-  html_url: string
+import * as S from './styles'
+
+type Props = {
+  repos: Project[]
 }
 
-const Projects = () => {
-  const [repos, setRepos] = useState([])
-
-  useEffect(() => {
-    fetch('https://api.github.com/users/heclypso/repos')
-      .then((resp) => resp.json())
-      .then((data) => setRepos(data))
-  }, [])
-
-  const selectedProjects = [
-    'efood',
-    'eplay',
-    'bxmailer-front',
-    'clone_disney_plus'
-  ]
-
-  const renameMap: Record<string, string> = {
-    'bxmailer-front': 'BXMailer',
-    clone_disney_plus: 'CDisney Plus',
-    efood: 'EFood',
-    eplay: 'Eplay'
-  }
-
-  const favoriteProjects = repos
-    .filter((repo: Project) => selectedProjects.includes(repo.name))
-    .map((repo: Project) => ({
-      ...repo,
-      name: renameMap[repo.name]
-    }))
-
+const ProjectsList = ({ repos }: Props) => {
   return (
     <section id="projects">
-      <Title>Projetos Favoritos</Title>
-      <List>
-        {favoriteProjects.map((project: Project) => (
+      <Title>Projetos</Title>
+      <S.LinkElement to={'/projects'}>Expandir</S.LinkElement>
+      <S.List>
+        {repos.map((project: Project) => (
           <Card
+            background={background}
             key={project.id}
             title={project.name}
             html_url={project.html_url}
           />
         ))}
-      </List>
+      </S.List>
     </section>
   )
 }
 
-export default Projects
+export default ProjectsList

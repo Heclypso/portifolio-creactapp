@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Title } from '../Title/styles'
 
-export const Card = styled.li`
+export const Card = styled.div`
   width: 100%;
   padding: 16px;
   display: flex;

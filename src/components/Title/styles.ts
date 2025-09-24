@@ -10,9 +10,9 @@ export const Title = styled.h3<Props>`
       ? '40px'
       : '20px'};
   font-weight: 900;
-  margin-bottom: ${({ marginBottom, type }) =>
-    marginBottom && type === 'primary'
-      ? marginBottom + 'px'
+  margin-bottom: ${({ $marginBottom, type }) =>
+    $marginBottom && type === 'primary'
+      ? $marginBottom + 'px'
       : type === 'secondary'
       ? ''
       : '32px'};

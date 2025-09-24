@@ -1,14 +1,13 @@
 import { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-import About from './containers/About'
-import Projects from './containers/ProjectsList'
 import Sidebar from './containers/Sidebar'
-import Experience from './containers/Experience'
 
 import LightTheme from './themes/light'
 import DarkTheme from './themes/dark'
 import { ThemeProvider } from 'styled-components'
 import EstiloGlobal, { Container } from './styles'
+import RoutesElement from './routes'
 
 function App() {
   const [darkThemeActive, setDarkThemeActive] = useState(false)
@@ -18,17 +17,15 @@ function App() {
   }
 
   return (
-    <ThemeProvider theme={darkThemeActive ? DarkTheme : LightTheme}>
-      <EstiloGlobal />
-      <Container>
-        <Sidebar switchTheme={switchTheme} />
-        <main>
-          <About />
-          <Projects />
-          <Experience />
-        </main>
-      </Container>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={darkThemeActive ? DarkTheme : LightTheme}>
+        <EstiloGlobal />
+        <Container>
+          <Sidebar switchTheme={switchTheme} />
+          <RoutesElement />
+        </Container>
+      </ThemeProvider>
+    </BrowserRouter>
   )
 }
 

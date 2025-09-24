@@ -11,8 +11,9 @@
     "@types/react-dom": "^18.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^7.9.2",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.11",
+    "styled-components": "^6.1.19",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -48,7 +49,6 @@
     "@types/bonjour": "^3.5.13",
     "@types/estree": "^1.0.7",
     "@types/node": "^22.15.29",
-    "@types/styled-components": "^5.1.34",
     "@types/trusted-types": "^2.0.7",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",

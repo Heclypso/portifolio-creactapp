@@ -33,6 +33,10 @@ const EstiloGlobal = createGlobalStyle`
   #experience {
     position: relative;
   }
+
+  #projects {
+    position: relative;
+  }
 `
 
 export const Container = styled.div`

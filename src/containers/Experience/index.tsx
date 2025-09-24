@@ -3,6 +3,8 @@ import Footer from '../../components/Footer'
 import Tags from '../../components/Tags'
 import Title from '../../components/Title'
 
+import background from '../../assets/generic_backgrounds/blue_pattern.jpg'
+
 import { List } from './styles'
 
 type Experience = {
@@ -27,7 +29,12 @@ const Experience = () => {
       <Title>Experiência</Title>
       <List>
         {experienceArray.map((e) => (
-          <Card key={e.id} title={e.title} html_url="#" />
+          <Card
+            background={background}
+            key={e.id}
+            title={e.title}
+            html_url="#"
+          />
         ))}
       </List>
       <Tags />
