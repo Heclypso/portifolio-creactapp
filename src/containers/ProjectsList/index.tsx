@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import Project from '../../components/Project'
+
+import Card from '../../components/Card'
 import Title from '../../components/Title'
+
 import { List } from './styles'
-import Button from '../../components/Button'
 
 type Project = {
   id: number
@@ -13,34 +14,46 @@ type Project = {
 
 const Projects = () => {
   const [repos, setRepos] = useState([])
-  const [showProjects, setShowProjects] = useState(false)
 
   useEffect(() => {
     fetch('https://api.github.com/users/heclypso/repos')
       .then((resp) => resp.json())
-      .then((data) => {
-        setRepos(data)
-        console.log(data)
-      })
+      .then((data) => setRepos(data))
   }, [])
+
+  const selectedProjects = [
+    'efood',
+    'eplay',
+    'bxmailer-front',
+    'clone_disney_plus'
+  ]
+
+  const renameMap: Record<string, string> = {
+    'bxmailer-front': 'BXMailer',
+    clone_disney_plus: 'CDisney Plus',
+    efood: 'EFood',
+    eplay: 'Eplay'
+  }
+
+  const favoriteProjects = repos
+    .filter((repo: Project) => selectedProjects.includes(repo.name))
+    .map((repo: Project) => ({
+      ...repo,
+      name: renameMap[repo.name]
+    }))
 
   return (
     <section>
-      <Button onClick={() => setShowProjects(true)} content="Expandir" />
-      {showProjects && (
-        <>
-          <Title fontSize={20} marginBottom={32}>
-            Projetos Favoritos
-          </Title>
-          <List>
-            {repos.map((project: Project) => (
-              <li key={project.id}>
-                <Project title={project.name} html_url={project.html_url} />
-              </li>
-            ))}
-          </List>
-        </>
-      )}
+      <Title>Projetos Favoritos</Title>
+      <List>
+        {favoriteProjects.map((project: Project) => (
+          <Card
+            key={project.id}
+            title={project.name}
+            html_url={project.html_url}
+          />
+        ))}
+      </List>
     </section>
   )
 }

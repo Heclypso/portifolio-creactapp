@@ -1,4 +1,4 @@
-import { Tag, TagContainer, TagDecoration } from './styles'
+import * as S from './styles'
 
 type Tag = {
   id: number
@@ -14,18 +14,26 @@ const Tags = () => {
     {
       id: 2,
       tecnology: 'Typescript'
+    },
+    {
+      id: 3,
+      tecnology: 'Jest'
+    },
+    {
+      id: 4,
+      tecnology: 'Cypress'
     }
   ]
 
   return (
-    <TagContainer>
+    <S.TagContainer>
       {Tags.map((tag) => (
-        <Tag key={tag.id}>
-          <TagDecoration />
+        <S.Tag key={tag.id}>
+          <S.TagDecoration />
           {tag.tecnology}
-        </Tag>
+        </S.Tag>
       ))}
-    </TagContainer>
+    </S.TagContainer>
   )
 }
 

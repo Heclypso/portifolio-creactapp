@@ -6,6 +6,7 @@ import Sidebar from './containers/Sidebar'
 import EstiloGlobal, { Container } from './styles'
 import LightTheme from './themes/light'
 import DarkTheme from './themes/dark'
+import Experience from './containers/Experience'
 
 function App() {
   const [darkThemeActive, setDarkThemeActive] = useState(false)
@@ -22,6 +23,7 @@ function App() {
         <main>
           <About />
           <Projects />
+          <Experience />
         </main>
       </Container>
     </ThemeProvider>

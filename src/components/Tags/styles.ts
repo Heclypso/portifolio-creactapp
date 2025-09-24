@@ -11,10 +11,10 @@ export const TagContainer = styled.div`
   padding: 16px;
   border-radius: 10px;
   margin-bottom: 16px;
+  margin-top: auto;
 `
 
 export const Tag = styled.div<Props>`
-  height: 22px;
   color: ${(props) => props.theme.primaryTextColor};
   background-color: ${(props) => props.theme.tertiaryColor};
   font-size: 16px;

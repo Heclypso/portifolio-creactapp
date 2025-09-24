@@ -5,8 +5,8 @@ const EstiloGlobal = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    list-style: none;
     text-decoration: none;
   }
 
@@ -15,11 +15,20 @@ const EstiloGlobal = createGlobalStyle`
   }
 
   main {
-    padding: 32px 32px 0px 0px;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
   }
 `
-
-export default EstiloGlobal
 
 export const Container = styled.div`
   width: 100%;
@@ -33,3 +42,5 @@ export const Container = styled.div`
     display: block;
   }
 `
+
+export default EstiloGlobal

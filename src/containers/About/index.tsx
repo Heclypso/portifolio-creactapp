@@ -1,15 +1,14 @@
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
-import { GithubSection } from './styles'
 import Tags from '../../components/Tags'
+
+import { GithubSection } from './styles'
 
 const About = () => {
   return (
     <section>
-      <Title fontSize={20} marginBottom={32}>
-        Sobre mim
-      </Title>
-      <Paragraph type="primary">
+      <Title>Sobre mim</Title>
+      <Paragraph>
         Olá, eu me chamo Gabriel e tenho 21 anos
         <br />
         <br />
