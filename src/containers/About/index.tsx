@@ -6,32 +6,33 @@ import { GithubSection } from './styles'
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <Title>Sobre mim</Title>
       <Paragraph>
         Olá, eu me chamo Gabriel e tenho 21 anos
         <br />
         <br />
-        Tenho um perfil multidisciplinar construído a partir de minhas
-        experiências anteriores em áreas voltadas ao ramo da programação e
-        demandas empresariais, onde pude desenvolver minha capacidade analítica,
-        empatia e trabalho em equipe, os quais considero pontos fortes que
-        poderei utilizar em possíveis desafios oferecidos pela carreira.
+        Eu descobri o mundo da programação por volta de 2018 que foi quando eu
+        comecei a planejar minha carreira.
         <br />
         <br />
-        Estou expandindo meu aprendizado e construindo meu portfólio com
-        projetos práticos. Atualmente, tenho habilidades em:
+        Em 2019 eu fiz uma prova para entrar na ETEC João Belarmino onde eu fiz
+        um curso técnico de Análise e Desenvolvimento de Sistemas integrado ao
+        ensino médio que foi a minha porta de entrada para o mundo da
+        programação.
         <br />
         <br />
-        Softwares de Design como o Figma
+        Eu sempre amei estudar então uma carreira que como requisito necessita
+        que você estude a todo momento durante a sua vida inteira caiu como uma
+        luva para mim.
         <br />
-        Softwares de Programação como o Visual Studio Code
         <br />
-        Ferramentas que auxiliam no desenvolvimento como Git e GitHub
+        Eu concluí o ensino médio em 2021 e planejo no futuro cursar mestreado
+        em engenharia de software e me tornar um programador excepcional.
         <br />
-        Mapeamento das necessidades do usuário
         <br />
-        Construção de interfaces multiplataformas
+        Eu usei o tempo de 2022 até o fim de 2023 para escolher a vertente da
+        programação que eu iria seguir e construir minha carreira.
       </Paragraph>
       <GithubSection>
         <img src="https://github-readme-stats.vercel.app/api?username=heclypso&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" />

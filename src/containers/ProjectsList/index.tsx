@@ -43,7 +43,7 @@ const Projects = () => {
     }))
 
   return (
-    <section>
+    <section id="projects">
       <Title>Projetos Favoritos</Title>
       <List>
         {favoriteProjects.map((project: Project) => (

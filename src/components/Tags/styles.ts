@@ -10,8 +10,11 @@ export const TagContainer = styled.div`
   gap: 14px;
   padding: 16px;
   border-radius: 10px;
-  margin-bottom: 16px;
   margin-top: auto;
+
+  &:first-of-type {
+    margin-bottom: 48px;
+  }
 `
 
 export const Tag = styled.div<Props>`

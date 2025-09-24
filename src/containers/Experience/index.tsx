@@ -1,4 +1,5 @@
 import Card from '../../components/Card'
+import Footer from '../../components/Footer'
 import Tags from '../../components/Tags'
 import Title from '../../components/Title'
 
@@ -22,7 +23,7 @@ const Experience = () => {
   ]
 
   return (
-    <section>
+    <section id="experience">
       <Title>Experiência</Title>
       <List>
         {experienceArray.map((e) => (
@@ -30,6 +31,7 @@ const Experience = () => {
         ))}
       </List>
       <Tags />
+      <Footer />
     </section>
   )
 }

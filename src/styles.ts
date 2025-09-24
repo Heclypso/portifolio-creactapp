@@ -8,6 +8,7 @@ const EstiloGlobal = createGlobalStyle`
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     text-decoration: none;
+    list-style: none;
   }
 
   body {
@@ -28,6 +29,10 @@ const EstiloGlobal = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
+
+  #experience {
+    position: relative;
+  }
 `
 
 export const Container = styled.div`
@@ -35,7 +40,6 @@ export const Container = styled.div`
   min-height: 100vh;
   display: grid;
   grid-template-columns: 444px auto;
-  column-gap: 32px;
 
   @media (max-width: 768px) {
     max-width: 80%;
