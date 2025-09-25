@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <main>
       <About />
-      <Projects repos={favoriteProjects} />
+      <Projects type="primary" repos={favoriteProjects} />
       <Experience />
     </main>
   )

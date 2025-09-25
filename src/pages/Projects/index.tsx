@@ -11,7 +11,7 @@ const Projects = () => {
       .then((data) => setRepos(data))
   }, [])
 
-  return <ProjectsList repos={repos} />
+  return <ProjectsList type="secondary" repos={repos} />
 }
 
 export default Projects

@@ -4,17 +4,30 @@ import Title from '../../components/Title'
 import background from '../../assets/generic_backgrounds/blue_pattern.jpg'
 
 import * as S from './styles'
+import Footer from '../../components/Footer'
 
-type Props = {
+export type Props = {
   repos: Project[]
+  type: 'primary' | 'secondary'
 }
 
-const ProjectsList = ({ repos }: Props) => {
+const ProjectsList = ({ repos, type }: Props) => {
   return (
-    <section id="projects">
+    <section
+      id="projects"
+      style={{ paddingBottom: type === 'secondary' ? '88px' : '' }}
+    >
       <Title>Projetos</Title>
-      <S.LinkElement to={'/projects'}>Expandir</S.LinkElement>
-      <S.List>
+      {type === 'primary' && (
+        <S.LinkElement to={'/projects'}>Ver todos</S.LinkElement>
+      )}
+      {type === 'secondary' && (
+        <>
+          <S.LinkElement to={'/'}>Voltar</S.LinkElement>
+          <Footer />
+        </>
+      )}
+      <S.List type={type}>
         {repos.map((project: Project) => (
           <Card
             background={background}

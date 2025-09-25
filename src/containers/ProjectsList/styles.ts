@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { Props } from '.'
+import { Title } from '../../components/Title/styles'
 
-export const List = styled.ul`
-  height: 80vh;
+export const List = styled.ul<Omit<Props, 'repos'>>`
+  height: ${({ type }) => (type === 'primary' ? '80vh' : '100%')};
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
@@ -11,6 +13,10 @@ export const List = styled.ul`
     grid-template-columns: 1fr;
     column-gap: 0;
     row-gap: 16px;
+  }
+
+  ${Title} {
+    font-size: ${({ type }) => (type === 'secondary' ? '28px' : '')};
   }
 `
 

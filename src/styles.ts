@@ -30,11 +30,7 @@ const EstiloGlobal = createGlobalStyle`
     flex-direction: column;
   }
 
-  #experience {
-    position: relative;
-  }
-
-  #projects {
+  #experience, #projects {
     position: relative;
   }
 `

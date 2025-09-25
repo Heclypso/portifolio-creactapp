@@ -3,11 +3,11 @@ import { Title } from '../Title/styles'
 
 export const Card = styled.div`
   width: 100%;
+  min-height: 291px;
   padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.secondaryColor};
   position: relative;
   z-index: 0;
 
