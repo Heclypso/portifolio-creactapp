@@ -1,6 +1,6 @@
 import Title from '../Title'
 
-import { Card as StyledCard } from './styles'
+import * as S from './styles'
 
 type Props = {
   title: string
@@ -9,16 +9,16 @@ type Props = {
 }
 
 const Card = ({ title, html_url, background }: Props) => (
-  <StyledCard
-    style={{
-      background: `url(${background}) no-repeat center`,
-      backgroundSize: 'cover'
-    }}
-  >
-    <a target="_blank" href={html_url} rel="noreferrer">
+  <a target="_blank" href={html_url} rel="noreferrer">
+    <S.Card
+      style={{
+        background: `url(${background}) no-repeat center`,
+        backgroundSize: 'cover'
+      }}
+    >
       <Title type="secondary">{title}</Title>
-    </a>
-  </StyledCard>
+    </S.Card>
+  </a>
 )
 
 export default Card

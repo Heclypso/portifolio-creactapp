@@ -6,7 +6,7 @@ const DarkTheme = {
   secondaryTextColor: '#D7D7D7',
   tertiaryTextColor: '#949494',
   overlayPrimaryColor: 'rgba(28, 28, 28, 0.8)',
-  overlaySecondaryColor: 'rgba(20, 20, 20, 0.6);',
+  overlaySecondaryColor: 'rgba(20, 20, 20, 0.9);',
   footerColor: '#1C1C1C'
 }
 
