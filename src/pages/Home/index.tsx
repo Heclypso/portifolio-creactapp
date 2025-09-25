@@ -20,7 +20,7 @@ const Home = () => {
     'clone_disney_plus'
   ]
 
-  const renameMap: Record<string, string> = {
+  const renameRecord: Record<string, string> = {
     'bxmailer-front': 'BXMailer',
     clone_disney_plus: 'CDisney Plus',
     efood: 'EFood',
@@ -31,7 +31,7 @@ const Home = () => {
     .filter((repo: Project) => selectedProjects.includes(repo.name))
     .map((repo: Project) => ({
       ...repo,
-      name: renameMap[repo.name]
+      name: renameRecord[repo.name]
     }))
 
   return (
