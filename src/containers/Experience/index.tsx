@@ -51,10 +51,7 @@ const Experience = () => {
           />
         ))}
       </List>
-      <div>
-        Principais Tecnologias
-        <Tags $tags={tagsArray} />
-      </div>
+      <Tags $tags={tagsArray} />
       <Footer />
     </section>
   )

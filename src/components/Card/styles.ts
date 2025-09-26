@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { Title } from '../Title/styles'
 
 export const Card = styled.div`
-  width: 100%;
-  min-height: 291px;
+  height: 38vh;
   padding: 16px;
   display: flex;
   justify-content: center;

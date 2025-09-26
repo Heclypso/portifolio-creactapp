@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+
 import { Theme } from './themes/dark'
 
 const EstiloGlobal = createGlobalStyle`
@@ -39,10 +40,11 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 444px auto;
+  grid-template-columns: 32vw auto;
 
   @media (max-width: 768px) {
-    max-width: 80%;
+    grid-template-columns: 1fr;
+    width: 100%;
     display: block;
   }
 `

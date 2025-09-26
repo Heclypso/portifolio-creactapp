@@ -5,4 +5,8 @@ export const List = styled.ul`
   grid-template-columns: 1fr 1fr;
   height: 45vh;
   gap: 32px;
+
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+  }
 `
