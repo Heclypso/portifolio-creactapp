@@ -1,3 +1,5 @@
+import { HashLink } from 'react-router-hash-link'
+
 import * as S from './styles'
 
 const Footer = () => (
@@ -5,16 +7,16 @@ const Footer = () => (
     <nav>
       <ul>
         <li>
-          <a href="#about">Sobre mim</a>
+          <HashLink to="/#about">Sobre mim</HashLink>
         </li>
         <li>
-          <a href="#projects">Projetos favoritos</a>
+          <HashLink to="/#projects">Projetos favoritos</HashLink>
         </li>
         <li>
-          <a href="#experience">Experiência</a>
+          <HashLink to="/#experience">Experiência</HashLink>
         </li>
         <li>
-          <a href="#copyright">Direitos Autorais</a>
+          <HashLink to="/#copyright">Direitos Autorais</HashLink>
         </li>
       </ul>
     </nav>
