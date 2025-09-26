@@ -1,20 +1,18 @@
 import styled from 'styled-components'
+import { ComponentProps } from '.'
 
 type Props = {
   children: React.ReactNode
 }
 
-export const TagContainer = styled.div`
+export const TagContainer = styled.div<ComponentProps>`
   background-color: ${(props) => props.theme.secondaryColor};
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
   padding: 16px;
   border-radius: 10px;
   margin-top: auto;
-
-  &:first-of-type {
-    margin-bottom: 48px;
-  }
 `
 
 export const Tag = styled.div<Props>`

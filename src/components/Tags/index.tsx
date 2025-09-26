@@ -1,36 +1,16 @@
 import * as S from './styles'
 
-type Tag = {
-  id: number
-  tecnology: string
+export type ComponentProps = {
+  $tags: string[]
 }
 
-const Tags = () => {
-  const Tags: Tag[] = [
-    {
-      id: 1,
-      tecnology: 'React'
-    },
-    {
-      id: 2,
-      tecnology: 'Typescript'
-    },
-    {
-      id: 3,
-      tecnology: 'Jest'
-    },
-    {
-      id: 4,
-      tecnology: 'Cypress'
-    }
-  ]
-
+const Tags = ({ $tags }: ComponentProps) => {
   return (
-    <S.TagContainer>
-      {Tags.map((tag) => (
-        <S.Tag key={tag.id}>
+    <S.TagContainer $tags={$tags}>
+      {$tags.map((tag, index) => (
+        <S.Tag key={index}>
           <S.TagDecoration />
-          {tag.tecnology}
+          {tag}
         </S.Tag>
       ))}
     </S.TagContainer>

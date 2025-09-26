@@ -24,6 +24,20 @@ const Experience = () => {
     }
   ]
 
+  const tagsArray: string[] = [
+    'HTML',
+    'Javascript',
+    'Typescript',
+    'JQuery',
+    'CSS',
+    'Sass',
+    'Gulp',
+    'React',
+    'Vue',
+    'Cypress',
+    'Jest'
+  ]
+
   return (
     <section id="experience">
       <Title>Experiência</Title>
@@ -37,7 +51,10 @@ const Experience = () => {
           />
         ))}
       </List>
-      <Tags />
+      <div>
+        Principais Tecnologias
+        <Tags $tags={tagsArray} />
+      </div>
       <Footer />
     </section>
   )
