@@ -34,6 +34,10 @@ const EstiloGlobal = createGlobalStyle`
   #experience, #projects {
     position: relative;
   }
+
+  #experience {
+    padding-bottom: 88px;
+  }
 `
 
 export const Container = styled.div`

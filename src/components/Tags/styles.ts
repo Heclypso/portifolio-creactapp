@@ -8,11 +8,16 @@ type Props = {
 export const TagContainer = styled.div<ComponentProps>`
   background-color: ${(props) => props.theme.secondaryColor};
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  flex-direction: column;
   padding: 16px;
-  border-radius: 10px;
-  margin-top: auto;
+  border-radius: 5px;
+  grid-column: 1 / 3;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
 `
 
 export const Tag = styled.div<Props>`

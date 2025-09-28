@@ -9,6 +9,7 @@ export const Card = styled.div`
   align-items: center;
   position: relative;
   z-index: 0;
+  border-radius: 5px;
 
   ${Title} {
     position: relative;

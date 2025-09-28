@@ -5,7 +5,7 @@ import Title from '../../components/Title'
 
 import background from '../../assets/generic_backgrounds/blue_pattern.jpg'
 
-import { List } from './styles'
+import * as S from './styles'
 
 type Experience = {
   id: number
@@ -41,7 +41,7 @@ const Experience = () => {
   return (
     <section id="experience">
       <Title>Experiência</Title>
-      <List>
+      <S.List>
         {experienceArray.map((e) => (
           <Card
             background={background}
@@ -50,8 +50,8 @@ const Experience = () => {
             html_url="#"
           />
         ))}
-      </List>
-      <Tags $tags={tagsArray} />
+        <Tags $tags={tagsArray} />
+      </S.List>
       <Footer />
     </section>
   )

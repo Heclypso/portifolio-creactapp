@@ -33,11 +33,11 @@ type ThemeButton = {
 }
 
 export const ThemeButton = styled.button<ThemeButton>`
-  border-radius: 12px;
-  padding: 8px 12px;
+  border-radius: 6px;
+  padding: 9px;
   color: ${(props) => props.theme.primaryTextColor};
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   background-color: ${(props) => props.theme.tertiaryColor};
   cursor: pointer;
   border: none;
