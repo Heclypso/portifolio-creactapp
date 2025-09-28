@@ -4,7 +4,7 @@ type Props = {
   html_url?: string
   content: string
   href?: string
-  onClick: () => void
+  onClick?: () => void
 }
 
 const Button = ({ html_url, content, href, onClick }: Props) => {
