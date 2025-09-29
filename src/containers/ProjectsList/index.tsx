@@ -1,10 +1,8 @@
 import Card from '../../components/Card'
 import Title from '../../components/Title'
-
-import background from '../../assets/generic_backgrounds/blue_pattern.jpg'
+import Footer from '../../components/Footer'
 
 import * as S from './styles'
-import Footer from '../../components/Footer'
 
 export type Props = {
   repos: Project[]
@@ -30,10 +28,12 @@ const ProjectsList = ({ repos, type }: Props) => {
       <S.List type={type}>
         {repos.map((project: Project) => (
           <Card
-            background={background}
             key={project.id}
             title={project.name}
-            html_url={project.html_url}
+            banner={project.banner}
+            description={project.description}
+            html_url_github={project.html_url_github}
+            html_url_vercel={project.html_url_vercel}
           />
         ))}
       </S.List>

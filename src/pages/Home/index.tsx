@@ -1,38 +1,15 @@
-import { useEffect, useState } from 'react'
-
 import About from '../../containers/About'
 import Experience from '../../containers/Experience'
 import Projects from '../../containers/ProjectsList'
 
+import { projects } from '../../projects'
+
 const Home = () => {
-  const [repos, setRepos] = useState([])
+  const selectedProjects = ['EFood', 'EPlay', 'BXMailer', 'Clone Disney Plus']
 
-  useEffect(() => {
-    fetch('https://api.github.com/users/heclypso/repos')
-      .then((resp) => resp.json())
-      .then((data) => setRepos(data))
-  }, [])
-
-  const selectedProjects = [
-    'efood',
-    'eplay',
-    'bxmailer-front',
-    'clone_disney_plus'
-  ]
-
-  const renameRecord: Record<string, string> = {
-    'bxmailer-front': 'BXMailer',
-    clone_disney_plus: 'CDisney Plus',
-    efood: 'EFood',
-    eplay: 'Eplay'
-  }
-
-  const favoriteProjects = repos
-    .filter((repo: Project) => selectedProjects.includes(repo.name))
-    .map((repo: Project) => ({
-      ...repo,
-      name: renameRecord[repo.name]
-    }))
+  const favoriteProjects = projects.filter((project: Project) =>
+    selectedProjects.includes(project.name)
+  )
 
   return (
     <main>

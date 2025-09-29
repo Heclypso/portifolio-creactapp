@@ -23,6 +23,10 @@ const Modal = ({
 }: Props) => {
   const theme = useTheme()
 
+  const filterDescription = (description: string) => {
+    return description.slice(0, 450) + '...'
+  }
+
   return (
     <S.Modal>
       <S.ModalHeader
@@ -38,7 +42,7 @@ const Modal = ({
       </S.ModalHeader>
       <S.ModalContainer>
         <S.ModalTitle>{title}</S.ModalTitle>
-        <S.Description>{description}</S.Description>
+        <S.Description>{filterDescription(description)}</S.Description>
         <div>
           <S.Button target="_blank" href={html_ref_github}>
             Ver no Github

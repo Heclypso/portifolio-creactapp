@@ -7,19 +7,20 @@ import * as S from './styles'
 
 type Props = {
   title: string
-  html_url: string
-  background: string
+  banner: string
+  html_url_github?: string
+  html_url_vercel?: string
+  description: string
 }
 
-const Card = ({ title, html_url, background }: Props) => {
+const Card = ({
+  title,
+  banner,
+  html_url_github,
+  html_url_vercel,
+  description
+}: Props) => {
   const [showModalState, setShowModalState] = useState(false)
-
-  const description = `O projeto se trata de uma loja virtual de games que utiliza o Redux para gerenciamento do carrinho de compras e faz a conexão com a API através do RTK Query.
-
-    Tecnologias utilizadas:
-
-    Redux • RTK Query • React • Typescript
-  `
 
   const closeModal = () => setShowModalState(false)
 
@@ -28,7 +29,7 @@ const Card = ({ title, html_url, background }: Props) => {
       <S.Card
         onClick={() => setShowModalState(true)}
         style={{
-          background: `url(${background}) no-repeat center`,
+          background: `url(${banner}) no-repeat center`,
           backgroundSize: 'cover'
         }}
       >
@@ -37,10 +38,10 @@ const Card = ({ title, html_url, background }: Props) => {
       {showModalState && (
         <Modal
           onClose={closeModal}
-          banner={background}
+          banner={banner}
           description={description}
-          html_ref_github={html_url}
-          html_ref_vercel="e"
+          html_ref_github={html_url_github ? html_url_github : ''}
+          html_ref_vercel={html_url_vercel ? html_url_vercel : ''}
           title={title}
         />
       )}

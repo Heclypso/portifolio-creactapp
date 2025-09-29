@@ -38,16 +38,18 @@ const Experience = () => {
     'Jest'
   ]
 
+  const dplaceholder = 'placeholder'
+
   return (
     <section id="experience">
       <Title>Experiência</Title>
       <S.List>
         {experienceArray.map((e) => (
           <Card
-            background={background}
             key={e.id}
             title={e.title}
-            html_url="#"
+            banner={background}
+            description={dplaceholder}
           />
         ))}
         <Tags $tags={tagsArray} />

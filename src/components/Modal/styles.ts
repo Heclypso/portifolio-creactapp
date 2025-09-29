@@ -25,8 +25,9 @@ export const ModalContainer = styled.div`
 `
 
 export const Description = styled.p`
-  color: ${(props) => props.theme.primaryTextColor};
   width: 515px;
+  height: 141px;
+  color: ${(props) => props.theme.primaryTextColor};
   white-space: pre-line;
   margin-bottom: 48px;
 `

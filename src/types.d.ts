@@ -2,5 +2,7 @@ declare type Project = {
   id: number
   name: string
   description: string
-  html_url: string
+  html_url_github: string
+  html_url_vercel?: string
+  banner: string
 }
