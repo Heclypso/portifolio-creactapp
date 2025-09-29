@@ -24,13 +24,6 @@ export const ModalContainer = styled.div`
   }
 `
 
-export const Description = styled.p`
-  color: ${(props) => props.theme.primaryTextColor};
-  width: 515px;
-  white-space: pre-line;
-  margin-bottom: 48px;
-`
-
 export const Button = styled.a`
   padding: 9px;
   font-size: 14px;
@@ -46,10 +39,4 @@ export const CloseIcon = styled.img`
   position: absolute;
   top: 24px;
   right: 24px;
-`
-
-export const ModalTitle = styled.h3`
-  font-size: 24px;
-  color: ${(props) => props.theme.primaryTextColor};
-  margin-bottom: 24px;
 `

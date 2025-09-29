@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 
 import About from '../../containers/About'
-import Experience from '../../containers/Experience'
+import Experiences from '../../containers/Experiences'
 import Projects from '../../containers/ProjectsList'
 
 import { setScrollY } from '../../store/reducers/sidebar'
@@ -33,7 +33,7 @@ const Home = () => {
     <main ref={mainRef}>
       <About />
       <Projects type="primary" repos={favoriteProjects} />
-      <Experience />
+      <Experiences />
     </main>
   )
 }

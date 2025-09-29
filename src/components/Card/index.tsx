@@ -10,7 +10,7 @@ type Props = {
   banner: string
   html_url_github?: string
   html_url_vercel?: string
-  description: string
+  description?: string
 }
 
 const Card = ({
@@ -24,10 +24,14 @@ const Card = ({
 
   const closeModal = () => setShowModalState(false)
 
+  const modalHandler = () => {
+    setShowModalState(true)
+  }
+
   return (
     <>
       <S.Card
-        onClick={() => setShowModalState(true)}
+        onClick={modalHandler}
         style={{
           background: `url(${banner}) no-repeat center`,
           backgroundSize: 'cover'
@@ -39,9 +43,9 @@ const Card = ({
         <Modal
           onClose={closeModal}
           banner={banner}
-          description={description}
-          html_ref_github={html_url_github ? html_url_github : ''}
-          html_ref_vercel={html_url_vercel ? html_url_vercel : ''}
+          description={description ?? ''}
+          html_ref_github={html_url_github ?? ''}
+          html_ref_vercel={html_url_vercel ?? ''}
           title={title}
         />
       )}

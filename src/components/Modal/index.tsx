@@ -3,6 +3,7 @@ import { useTheme } from 'styled-components'
 import closeIcon from '../../assets/icons/close-icon.png'
 
 import * as S from './styles'
+import { ContentTitle, Description } from '../../styles'
 
 type Props = {
   banner: string
@@ -41,8 +42,8 @@ const Modal = ({
         />
       </S.ModalHeader>
       <S.ModalContainer>
-        <S.ModalTitle>{title}</S.ModalTitle>
-        <S.Description>{filterDescription(description)}</S.Description>
+        <ContentTitle>{title}</ContentTitle>
+        <Description>{filterDescription(description)}</Description>
         <div>
           <S.Button target="_blank" href={html_ref_github}>
             Ver no Github

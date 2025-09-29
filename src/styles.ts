@@ -54,4 +54,17 @@ export const Container = styled.div`
   }
 `
 
+export const ContentTitle = styled.h3`
+  font-size: 24px;
+  color: ${(props) => props.theme.primaryTextColor};
+  margin-bottom: 24px;
+`
+
+export const Description = styled.p`
+  color: ${(props) => props.theme.primaryTextColor};
+  width: 515px;
+  white-space: pre-line;
+  margin-bottom: 48px;
+`
+
 export default EstiloGlobal
