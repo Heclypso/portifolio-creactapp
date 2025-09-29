@@ -2,15 +2,15 @@ import styled from 'styled-components'
 import { P } from '../../components/Paragraph/styles'
 
 export const SidebarContainer = styled.div`
+  height: 100vh;
+  background-color: ${(props) => props.theme.secondaryColor};
   position: sticky;
   top: 0;
   left: 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme.secondaryColor};
 
   @media (max-width: 768px) {
     margin-bottom: 40px;
@@ -30,6 +30,7 @@ export const Description = styled(P)`
 type ThemeButton = {
   children: React.ReactNode
   onClick: () => void
+  $isVisible: boolean
 }
 
 export const ThemeButton = styled.button<ThemeButton>`
@@ -41,4 +42,5 @@ export const ThemeButton = styled.button<ThemeButton>`
   background-color: ${(props) => props.theme.tertiaryColor};
   cursor: pointer;
   border: none;
+  opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
 `

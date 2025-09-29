@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Modal = styled.div`
   width: calc(100% - 32px);
-  height: 100%;
+  height: 100vh;
   background-color: ${(props) => props.theme.secondaryColor};
   position: absolute;
   top: 0;
@@ -12,7 +12,7 @@ export const Modal = styled.div`
 
 export const ModalHeader = styled.header`
   position: relative;
-  height: 280px;
+  height: 36.4%;
 `
 
 export const ModalContainer = styled.div`
@@ -25,9 +25,8 @@ export const ModalContainer = styled.div`
 `
 
 export const Description = styled.p`
-  width: 515px;
-  height: 141px;
   color: ${(props) => props.theme.primaryTextColor};
+  width: 515px;
   white-space: pre-line;
   margin-bottom: 48px;
 `

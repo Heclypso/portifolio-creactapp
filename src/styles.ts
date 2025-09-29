@@ -45,6 +45,7 @@ export const Container = styled.div`
   min-height: 100vh;
   display: grid;
   grid-template-columns: 32vw auto;
+  position: relative;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

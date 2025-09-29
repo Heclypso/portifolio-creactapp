@@ -24,7 +24,7 @@ const Modal = ({
   const theme = useTheme()
 
   const filterDescription = (description: string) => {
-    return description.slice(0, 450) + '...'
+    return description.slice(0, 450).trim() + '...'
   }
 
   return (
