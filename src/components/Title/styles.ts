@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Props } from '.'
+import { breakpoints } from '../../styles'
 
 export const Title = styled.h3<Props>`
   color: ${(props) => props.theme.primaryTextColor};
@@ -17,4 +18,13 @@ export const Title = styled.h3<Props>`
       ? ''
       : '32px'};
   text-align: center;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: ${({ fontSize, type }) =>
+      fontSize && type === 'primary'
+        ? fontSize + 'px'
+        : type === 'secondary'
+        ? '24px'
+        : '28px'};
+  }
 `

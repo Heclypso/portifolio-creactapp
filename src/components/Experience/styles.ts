@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Experience = styled.div`
   height: 300px;
-  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +19,14 @@ export const Container = styled.div`
   grid-template-rows: 1fr 1fr;
   gap: 32px;
   padding: 32px;
+
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  }
 `
 
 export const Subcategory = styled.div`

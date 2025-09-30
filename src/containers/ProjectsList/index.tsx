@@ -11,19 +11,10 @@ export type Props = {
 
 const ProjectsList = ({ repos, type }: Props) => {
   return (
-    <section
-      id="projects"
-      style={{ paddingBottom: type === 'secondary' ? '88px' : '' }}
-    >
+    <section id="projects">
       <Title>Projetos</Title>
       {type === 'primary' && (
         <S.LinkElement to={'/projects'}>Ver todos</S.LinkElement>
-      )}
-      {type === 'secondary' && (
-        <>
-          <S.LinkElement to={'/'}>Voltar</S.LinkElement>
-          <Footer />
-        </>
       )}
       <S.List type={type}>
         {repos.map((project: Project) => (
@@ -37,6 +28,12 @@ const ProjectsList = ({ repos, type }: Props) => {
           />
         ))}
       </S.List>
+      {type === 'secondary' && (
+        <>
+          <S.LinkElement to={'/'}>Voltar</S.LinkElement>
+          <Footer />
+        </>
+      )}
     </section>
   )
 }

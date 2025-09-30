@@ -2,6 +2,11 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 import { Theme } from './themes/dark'
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 const EstiloGlobal = createGlobalStyle`
   * {
     margin: 0;
@@ -21,22 +26,26 @@ const EstiloGlobal = createGlobalStyle`
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      height: auto;
+      scroll-snap-type: none;
+      scroll-behavior: auto;
+    }
   }
 
   section {
     min-height: 100vh;
     scroll-snap-align: start;
     padding: 32px;
-    display: flex;
-    flex-direction: column;
   }
 
   #experience, #projects {
     position: relative;
-  }
 
-  #experience {
-    padding-bottom: 88px;
+    @media(max-width: 768px) {
+      padding: 32px 0 0 0;
+    }
   }
 `
 
@@ -47,7 +56,7 @@ export const Container = styled.div`
   grid-template-columns: 32vw auto;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.tablet}) {
     grid-template-columns: 1fr;
     width: 100%;
     display: block;
@@ -65,6 +74,10 @@ export const Description = styled.p`
   width: 515px;
   white-space: pre-line;
   margin-bottom: 48px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+  }
 `
 
 export default EstiloGlobal

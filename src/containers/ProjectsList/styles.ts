@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Props } from '.'
 import { Title } from '../../components/Title/styles'
+import { breakpoints } from '../../styles'
 
 export const List = styled.ul<Omit<Props, 'repos'>>`
   height: ${({ type }) => (type === 'primary' ? '80vh' : '100%')};
@@ -9,15 +10,21 @@ export const List = styled.ul<Omit<Props, 'repos'>>`
   grid-template-columns: 1fr 1fr;
   gap: 32px;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: 16px;
-  }
-
   ${Title} {
     font-size: ${({ type }) => (type === 'secondary' ? '28px' : '')};
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 32px;
+  }
+`
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const LinkElement = styled(Link)`

@@ -25,7 +25,7 @@ const Card = ({
   const closeModal = () => setShowModalState(false)
 
   const modalHandler = () => {
-    setShowModalState(true)
+    setShowModalState((prev) => !prev)
   }
 
   return (

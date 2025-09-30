@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { P } from '../../components/Paragraph/styles'
+import { breakpoints } from '../../styles'
 
 export const SidebarContainer = styled.div`
   height: 100vh;
@@ -12,9 +13,8 @@ export const SidebarContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
-    margin-bottom: 40px;
-    text-align: center;
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 80vh;
     position: static;
   }
 `

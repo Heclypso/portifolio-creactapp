@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import { useTheme } from 'styled-components'
 
@@ -9,6 +9,7 @@ import { ContentTitle, Description } from '../../styles'
 import * as S from './styles'
 
 const Experience = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
   const theme = useTheme()
   const [showSubcategoryId, setShowSubcategoryId] = useState<number | null>(
     null
@@ -16,6 +17,14 @@ const Experience = () => {
   const [openSubCategoryId, setOpenSubCategoryId] = useState<number | null>(
     null
   )
+
+  useEffect(() => {
+    containerRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    })
+  }, [showSubcategoryId])
 
   return (
     <>
@@ -29,7 +38,7 @@ const Experience = () => {
         >
           <Title type="secondary">{e.title}</Title>
           {showSubcategoryId === e.id && (
-            <S.Container>
+            <S.Container ref={containerRef}>
               {e.subcategory?.map((c) => (
                 <div key={c.id}>
                   <S.Subcategory

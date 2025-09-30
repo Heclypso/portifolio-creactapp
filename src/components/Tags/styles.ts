@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { ComponentProps } from '.'
+import { breakpoints } from '../../styles'
 
 type Props = {
   children: React.ReactNode
@@ -9,14 +10,23 @@ export const TagContainer = styled.div<ComponentProps>`
   background-color: ${(props) => props.theme.secondaryColor};
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 16px 16px 32px 16px;
   border-radius: 5px;
   grid-column: 1 / 3;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 0;
+  }
 
   > div {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      gap: 12px;
+      justify-content: center;
+    }
   }
 `
 

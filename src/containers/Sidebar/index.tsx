@@ -28,7 +28,7 @@ const Sidebar = (props: Props) => {
   return (
     <S.SidebarContainer>
       <Avatar />
-      <Title $marginBottom={6} type="primary">
+      <Title fontSize={20} $marginBottom={6} type="primary">
         Gabriel Munhak
       </Title>
       <Paragraph type="secondary" fontSize={16}>

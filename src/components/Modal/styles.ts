@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const Modal = styled.div`
   width: calc(100% - 32px);
@@ -8,11 +9,22 @@ export const Modal = styled.div`
   top: 0;
   right: 0;
   z-index: 1;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin-top: -33px;
+  }
 `
 
 export const ModalHeader = styled.header`
   position: relative;
   height: 36.4%;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
 `
 
 export const ModalContainer = styled.div`
