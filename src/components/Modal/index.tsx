@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+
 import { useTheme } from 'styled-components'
 
 import closeIcon from '../../assets/icons/close-icon.png'
@@ -23,13 +25,22 @@ const Modal = ({
   onClose
 }: Props) => {
   const theme = useTheme()
+  const modalRef = useRef<HTMLDivElement>(null)
 
   const filterDescription = (description: string) => {
     return description.slice(0, 450).trim() + '...'
   }
 
+  useEffect(() => {
+    modalRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    })
+  })
+
   return (
-    <S.Modal>
+    <S.Modal ref={modalRef}>
       <S.ModalHeader
         style={{
           background: `linear-gradient(${theme.overlaySecondaryColor}, ${theme.overlaySecondaryColor}), url(${banner}) no-repeat top / cover`

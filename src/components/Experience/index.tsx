@@ -4,6 +4,8 @@ import { useTheme } from 'styled-components'
 
 import { experiences } from '../../experience'
 
+import closeIcon from '../../assets/icons/close-icon.png'
+
 import Title from '../Title'
 import { ContentTitle, Description } from '../../styles'
 import * as S from './styles'
@@ -11,6 +13,7 @@ import * as S from './styles'
 const Experience = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const theme = useTheme()
+
   const [showSubcategoryId, setShowSubcategoryId] = useState<number | null>(
     null
   )
@@ -38,11 +41,20 @@ const Experience = () => {
         >
           <Title type="secondary">{e.title}</Title>
           {showSubcategoryId === e.id && (
-            <S.Container ref={containerRef}>
+            <S.Container
+              onClick={(ev) => {
+                ev.stopPropagation()
+                setShowSubcategoryId(null)
+              }}
+              ref={containerRef}
+            >
               {e.subcategory?.map((c) => (
                 <div key={c.id}>
                   <S.Subcategory
-                    onClick={() => setOpenSubCategoryId(c.id)}
+                    onClick={(ev) => {
+                      ev.stopPropagation()
+                      setOpenSubCategoryId(c.id)
+                    }}
                     style={{
                       background: `linear-gradient(${theme.overlaySecondaryColor}, ${theme.overlaySecondaryColor}), url(${c.banner}) no-repeat center / cover`
                     }}
@@ -55,6 +67,11 @@ const Experience = () => {
                         style={{
                           background: `linear-gradient(${theme.overlaySecondaryColor}, ${theme.overlaySecondaryColor}), url(${c.banner}) no-repeat top / cover`
                         }}
+                      />
+                      <S.Icon
+                        onClick={() => setOpenSubCategoryId(null)}
+                        src={closeIcon}
+                        alt="Fechar"
                       />
                       <S.InfosWrapper>
                         <ContentTitle>{c.title}</ContentTitle>

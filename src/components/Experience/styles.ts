@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const Experience = styled.div`
   height: 300px;
@@ -20,12 +21,20 @@ export const Container = styled.div`
   gap: 32px;
   padding: 32px;
 
-  @media (max-width: 780px) {
-    grid-template-columns: 1fr;
+  @media (max-width: ${breakpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     position: absolute;
     width: 100%;
     height: 100vh;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    width: 100%;
+    height: 100.5vh;
   }
 `
 
@@ -46,9 +55,19 @@ export const Content = styled.div`
   right: 0;
 `
 
+export const Icon = styled.img`
+  position: absolute;
+  top: 32px;
+  right: 32px;
+`
+
 export const Banner = styled.div`
   width: 100%;
   height: 64%;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 40%;
+  }
 `
 
 export const InfosWrapper = styled.div`
