@@ -16,7 +16,13 @@ const Footer = () => (
           <HashLink to="/#experience">Experiência</HashLink>
         </li>
         <li>
-          <HashLink to="/#copyright">Direitos Autorais</HashLink>
+          <a
+            target="_blank"
+            href="https://br.freepik.com/vetores-gratis/abstract-blue-wave-circles-pattern-patrao-de-circulos-de-ondas-azuis_415090275.htm#fromView=search&page=1&position=14&uuid=54569887-43c5-4b06-b114-9d2e34cfd66c&query=blue+and+white+pattern https://br.freepik.com/vetores-gratis/abstract-blue-wave-circles-pattern-patrao-de-circulos-de-ondas-azuis_415090275.htm#fromView=search&page=1&position=14&uuid=54569887-43c5-4b06-b114-9d2e34cfd66c&query=blue+and+white+pattern "
+            rel="noreferrer"
+          >
+            Direitos Autorais
+          </a>
         </li>
       </ul>
     </nav>

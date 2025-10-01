@@ -10,6 +10,7 @@ const Experiences = () => {
     'HTML',
     'Javascript',
     'Typescript',
+    'Bootstrap',
     'JQuery',
     'CSS',
     'Sass',
@@ -17,7 +18,9 @@ const Experiences = () => {
     'React',
     'Vue',
     'Cypress',
-    'Jest'
+    'Jest',
+    'Git',
+    'Github'
   ]
 
   return (
