@@ -63,11 +63,7 @@ export const Icon = styled.img`
 
 export const Banner = styled.div`
   width: 100%;
-  height: 64%;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    height: 40%;
-  }
+  height: 40%;
 `
 
 export const InfosWrapper = styled.div`
