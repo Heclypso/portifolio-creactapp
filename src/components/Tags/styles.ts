@@ -11,7 +11,7 @@ export const TagContainer = styled.div<ComponentProps>`
   display: flex;
   flex-direction: column;
   padding: 16px 16px 32px 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   grid-column: 1 / 3;
 
   @media (max-width: ${breakpoints.tablet}) {

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { breakpoints } from '../../styles'
 
 export const Modal = styled.div`
-  width: calc(100% - 32px);
+  width: calc(100% - 31px);
   height: 100vh;
   background-color: ${(props) => props.theme.secondaryColor};
   position: absolute;

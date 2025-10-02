@@ -43,7 +43,9 @@ const About = () => {
         Ainda em 2023 enquanto trabalhava na Ypê eu investi parte do meu salário
         em um curso de Engenheiro Front-end na EBAC.
         <br />
-        <br />E isso me traz ao meu momento de carreira atual.
+        <br />A partir do começo do curso até a sua finalização, no fim de
+        setembro de 2025, pude desenvolver diversos projetos que contribuiram e
+        muito na minha carreira como Engenheiro Front-end.
       </Paragraph>
       <GithubSection>
         <img src="https://github-readme-stats.vercel.app/api?username=heclypso&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" />

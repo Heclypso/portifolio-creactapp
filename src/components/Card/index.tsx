@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { useTheme } from 'styled-components'
+
 import Modal from '../Modal'
 import Title from '../Title'
 
@@ -22,6 +24,8 @@ const Card = ({
 }: Props) => {
   const [showModalState, setShowModalState] = useState(false)
 
+  const theme = useTheme()
+
   const closeModal = () => setShowModalState(false)
 
   const modalHandler = () => {
@@ -33,7 +37,7 @@ const Card = ({
       <S.Card
         onClick={modalHandler}
         style={{
-          background: `url(${banner}) no-repeat center`,
+          background: `linear-gradient(${theme.overlayPrimaryColor}) , url(${banner}) no-repeat center`,
           backgroundSize: 'cover'
         }}
       >

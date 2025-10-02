@@ -4,8 +4,6 @@ import { useTheme } from 'styled-components'
 
 import { experiences } from '../../experience'
 
-import closeIcon from '../../assets/icons/close-icon.png'
-
 import Title from '../Title'
 import { ContentTitle, Description } from '../../styles'
 import * as S from './styles'
@@ -41,13 +39,7 @@ const Experience = () => {
         >
           <Title type="secondary">{e.title}</Title>
           {showSubcategoryId === e.id && (
-            <S.Container
-              onClick={(ev) => {
-                ev.stopPropagation()
-                setShowSubcategoryId(null)
-              }}
-              ref={containerRef}
-            >
+            <S.Container ref={containerRef}>
               {e.subcategory?.map((c) => (
                 <div key={c.id}>
                   <S.Subcategory
@@ -68,14 +60,26 @@ const Experience = () => {
                           background: `linear-gradient(${theme.overlaySecondaryColor}, ${theme.overlaySecondaryColor}), url(${c.banner}) no-repeat top / cover`
                         }}
                       />
-                      <S.Icon
-                        onClick={() => setOpenSubCategoryId(null)}
-                        src={closeIcon}
-                        alt="Fechar"
-                      />
                       <S.InfosWrapper>
                         <ContentTitle>{c.title}</ContentTitle>
                         <Description>{c.description}</Description>
+                        <S.CloseBtn
+                          onClick={() => {
+                            setShowSubcategoryId(null)
+                            setOpenSubCategoryId(null)
+                          }}
+                        >
+                          Voltar
+                        </S.CloseBtn>
+                        <S.CloseBtn
+                          onClick={(ev) => {
+                            ev.stopPropagation()
+                            setShowSubcategoryId(null)
+                            setOpenSubCategoryId(null)
+                          }}
+                        >
+                          Fechar tudo
+                        </S.CloseBtn>
                       </S.InfosWrapper>
                     </S.Content>
                   )}

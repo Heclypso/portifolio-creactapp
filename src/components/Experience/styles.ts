@@ -3,6 +3,7 @@ import { breakpoints } from '../../styles'
 
 export const Experience = styled.div`
   height: 300px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,4 +69,16 @@ export const Banner = styled.div`
 
 export const InfosWrapper = styled.div`
   padding: 32px;
+`
+
+export const CloseBtn = styled.button`
+  font-size: 14px;
+  font-weight: 700;
+  height: 32px;
+  border: none;
+  background-color: ${(props) => props.theme.primaryColor};
+  color: ${(props) => props.theme.primaryTextColor};
+  margin-right: 14px;
+  padding: 4.5px 9px;
+  border-radius: 6px;
 `

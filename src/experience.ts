@@ -25,6 +25,14 @@ export const experiences: Experience[] = [
         Em equipe conseguimos planejar e executar a manutenção contínua dos equipamentos da área reduzindo a chance de quebra do equipamento bruscamente.
 
         Através do meu desempenho na empresa, me tornei o primeiro jovem aprendiz do meu setor a participar de um projeto da Ypê.`
+      },
+      {
+        id: 2,
+        title: 'Programador',
+        banner: ype,
+        description: `A maior parte da minha experiência como programador foi adquirida por meio do desenvolvimento de projetos voltados ao Front-end. Durante o ensino médio, também tive contato com outras linguagens que abrangiam diferentes áreas da programação, como sistemas embarcados, back-end e banco de dados.
+
+Além disso, tive uma breve experiência no mercado de programação freelancer, mas decidi direcionar meu tempo para o aprimoramento dos meus conhecimentos, com o objetivo de desenvolver projetos de maior qualidade e me preparar para os diversos desafios da carreira como programador Front-end.`
       }
     ]
   },

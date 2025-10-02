@@ -10,7 +10,7 @@ const Footer = () => (
           <HashLink to="/#about">Sobre mim</HashLink>
         </li>
         <li>
-          <HashLink to="/#projects">Projetos favoritos</HashLink>
+          <HashLink to="/#projects">Projetos</HashLink>
         </li>
         <li>
           <HashLink to="/#experience">Experiência</HashLink>

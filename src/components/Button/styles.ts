@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ButtonElement = styled.div`
   color: ${(props) => props.theme.primaryTextColor};
-  font-size: 14;
+  font-size: 14px;
   background-color: ${(props) => props.theme.secondaryColor};
   text-decoration: none;
   padding: 8px;

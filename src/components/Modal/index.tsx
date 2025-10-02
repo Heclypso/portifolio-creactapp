@@ -28,7 +28,10 @@ const Modal = ({
   const modalRef = useRef<HTMLDivElement>(null)
 
   const filterDescription = (description: string) => {
-    return description.slice(0, 450).trim() + '...'
+    if (description.length >= 450) {
+      return description.slice(0, 450).trim() + '...'
+    }
+    return description
   }
 
   useEffect(() => {
@@ -59,9 +62,11 @@ const Modal = ({
           <S.Button target="_blank" href={html_ref_github}>
             Ver no Github
           </S.Button>
-          <S.Button target="_blank" href={html_ref_vercel}>
-            Ver na Vercel
-          </S.Button>
+          {html_ref_vercel && (
+            <S.Button target="_blank" href={html_ref_vercel}>
+              Ver na Vercel
+            </S.Button>
+          )}
         </div>
       </S.ModalContainer>
     </S.Modal>

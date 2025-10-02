@@ -40,6 +40,10 @@ const EstiloGlobal = createGlobalStyle`
     padding: 32px;
   }
 
+  #about {
+    padding: 32px 32px 0px 32px;
+  }
+
   #experience, #projects {
     position: relative;
 
