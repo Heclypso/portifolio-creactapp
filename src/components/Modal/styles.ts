@@ -24,14 +24,6 @@ export const Modal = styled.div`
 export const ModalHeader = styled.header`
   position: relative;
   height: 36.4%;
-
-  @media (max-width: ${breakpoints.desktop}) {
-    display: flex;
-  }
-
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
 `
 
 export const ModalContainer = styled.div`

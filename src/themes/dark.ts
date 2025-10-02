@@ -7,6 +7,7 @@ const DarkTheme = {
   tertiaryTextColor: '#949494',
   overlayPrimaryColor: 'rgba(28, 28, 28, 0.8)',
   overlaySecondaryColor: 'rgba(0, 0, 0, 0.55)',
+  overlayTextColor: '#fff',
   footerColor: '#1C1C1C'
 }
 
@@ -21,5 +22,6 @@ export type Theme = {
   tertiaryTextColor: string
   overlayPrimaryColor: string
   overlaySecondaryColor: string
+  overlayTextColor: string
   footerColor: string
 }

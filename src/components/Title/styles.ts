@@ -3,7 +3,10 @@ import { Props } from '.'
 import { breakpoints } from '../../styles'
 
 export const Title = styled.h3<Props>`
-  color: ${(props) => props.theme.primaryTextColor};
+  color: ${(props) =>
+    props.type === 'secondary'
+      ? props.theme.overlayTextColor
+      : props.theme.primaryTextColor};
   font-size: ${({ fontSize, type }) =>
     fontSize && type === 'primary'
       ? fontSize + 'px'
