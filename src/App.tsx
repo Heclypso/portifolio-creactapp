@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
@@ -9,13 +9,22 @@ import store from './store'
 
 import LightTheme from './themes/light'
 import DarkTheme from './themes/dark'
+
 import EstiloGlobal, { Container } from './styles'
 
 function App() {
-  const [darkThemeActive, setDarkThemeActive] = useState(false)
+  const [darkThemeActive, setDarkThemeActive] = useState(true)
 
-  function switchTheme() {
-    setDarkThemeActive(!darkThemeActive)
+  useEffect(() => {
+    const currentBrowserTheme = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    )
+
+    setDarkThemeActive(currentBrowserTheme.matches)
+  }, [])
+
+  const switchTheme = () => {
+    setDarkThemeActive((prev) => !prev)
   }
 
   return (
