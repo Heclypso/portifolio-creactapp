@@ -1,12 +1,12 @@
-import bxmailer from './assets/project_banners/bxmailer.png'
-import efood from './assets/project_banners/efood.png'
-import eplay from './assets/project_banners/eplay.png'
-import cdplus from './assets/project_banners/cdplus.png'
-import ldcontatos from './assets/project_banners/ldcontatos.png'
-import ehtml from './assets/project_banners/ehtml.png'
-import jqdfotos from './assets/project_banners/jqgdfotos.png'
-import tcnest from './assets/project_banners/tcnest.png'
-import arecentes from './assets/project_banners/arecentes.png'
+import bxmailer from '../assets/project_banners/bxmailer.png'
+import efood from '../assets/project_banners/efood.png'
+import eplay from '../assets/project_banners/eplay.png'
+import cdplus from '../assets/project_banners/cdplus.png'
+import ldcontatos from '../assets/project_banners/ldcontatos.png'
+import ehtml from '../assets/project_banners/ehtml.png'
+import jqdfotos from '../assets/project_banners/jqgdfotos.png'
+import tcnest from '../assets/project_banners/tcnest.png'
+import arecentes from '../assets/project_banners/arecentes.png'
 
 export const projects: Project[] = [
   {

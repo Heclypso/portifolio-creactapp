@@ -1,7 +1,7 @@
-import ebac from './assets/experience_banners/ebac.png'
-import espro from './assets/experience_banners/espro.jpg'
-import ype from './assets/experience_banners/generic-banner.jpg'
-import etec from './assets/experience_banners/etec.jpg'
+import ebac from '../assets/experience_banners/ebac.png'
+import espro from '../assets/experience_banners/espro.jpg'
+import ype from '../assets/experience_banners/generic-banner.jpg'
+import etec from '../assets/experience_banners/etec.jpg'
 
 type Experience = {
   id: number

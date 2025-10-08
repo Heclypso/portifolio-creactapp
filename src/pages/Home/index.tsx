@@ -7,7 +7,7 @@ import Projects from '../../containers/ProjectsList'
 
 import { setScrollY } from '../../store/reducers/sidebar'
 
-import { projects } from '../../projects'
+import { projects } from '../../data/projects'
 
 const Home = () => {
   const dispatch = useDispatch()

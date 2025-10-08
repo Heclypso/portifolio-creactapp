@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 
 import { useTheme } from 'styled-components'
 
-import { experiences } from '../../experience'
+import { experiences } from '../../data/experience'
 
 import Title from '../Title'
 import { ContentTitle, Description } from '../../styles'
