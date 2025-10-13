@@ -30,7 +30,7 @@ export const Container = styled.div`
     height: 100vh;
   }
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.mobile}) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     position: absolute;

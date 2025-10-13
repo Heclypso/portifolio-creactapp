@@ -22,7 +22,7 @@ export const Title = styled.h3<Props>`
       : '32px'};
   text-align: center;
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.mobile}) {
     font-size: ${({ fontSize, type }) =>
       fontSize && type === 'primary'
         ? fontSize + 'px'

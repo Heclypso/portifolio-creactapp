@@ -14,7 +14,7 @@ export const TagContainer = styled.div<ComponentProps>`
   border-radius: 10px;
   grid-column: 1 / 3;
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.mobile}) {
     margin-bottom: 0;
   }
 
@@ -23,7 +23,7 @@ export const TagContainer = styled.div<ComponentProps>`
     flex-wrap: wrap;
     gap: 14px;
 
-    @media (max-width: ${breakpoints.tablet}) {
+    @media (max-width: ${breakpoints.mobile}) {
       gap: 12px;
       justify-content: center;
     }

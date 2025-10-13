@@ -4,7 +4,7 @@ import { Theme } from './themes/dark'
 
 export const breakpoints = {
   desktop: '1024px',
-  tablet: '768px'
+  mobile: '768px'
 }
 
 const EstiloGlobal = createGlobalStyle`
@@ -27,7 +27,7 @@ const EstiloGlobal = createGlobalStyle`
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 
-    @media (max-width: ${breakpoints.tablet}) {
+    @media (max-width: ${breakpoints.desktop}) {
       height: auto;
       scroll-snap-type: none;
       scroll-behavior: auto;
@@ -47,7 +47,7 @@ const EstiloGlobal = createGlobalStyle`
   #experience, #projects {
     position: relative;
 
-    @media(max-width: 768px) {
+    @media(max-width: ${breakpoints.desktop}) {
       padding: 32px 0 0 0;
     }
   }
@@ -60,7 +60,7 @@ export const Container = styled.div`
   grid-template-columns: 32vw auto;
   position: relative;
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.desktop}) {
     grid-template-columns: 1fr;
     width: 100%;
     display: block;
@@ -79,7 +79,7 @@ export const Description = styled.p`
   white-space: pre-line;
   margin-bottom: 48px;
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.desktop}) {
     width: 100%;
   }
 `

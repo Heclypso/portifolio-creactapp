@@ -13,7 +13,7 @@ export const GithubSection = styled.div`
       width: 50%;
     }
 
-    @media (max-width: ${breakpoints.tablet}) {
+    @media (max-width: ${breakpoints.mobile}) {
       height: auto;
       width: 100%;
     }

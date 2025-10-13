@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   background-color: ${(props) => props.theme.footerColor};
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.mobile}) {
     height: auto;
     display: block;
     padding: 32px;
@@ -22,14 +22,14 @@ export const FooterContainer = styled.footer`
   ul {
     display: flex;
 
-    @media (max-width: ${breakpoints.tablet}) {
+    @media (max-width: ${breakpoints.mobile}) {
       flex-direction: column;
     }
 
     li {
       margin-right: 24px;
 
-      @media (max-width: ${breakpoints.tablet}) {
+      @media (max-width: ${breakpoints.mobile}) {
         margin-bottom: 10px;
         margin-right: 0;
       }

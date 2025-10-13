@@ -17,9 +17,11 @@ export const List = styled.ul<Omit<Props, 'repos'>>`
 
   @media (max-width: ${breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr;
+    padding: 32px;
+    height: auto;
   }
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.mobile}) {
     grid-template-columns: 1fr;
     height: auto;
     padding: 32px;

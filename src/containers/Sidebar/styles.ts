@@ -13,7 +13,7 @@ export const SidebarContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.desktop}) {
     height: 80vh;
     position: static;
   }
