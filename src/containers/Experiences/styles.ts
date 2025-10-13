@@ -11,7 +11,6 @@ export const List = styled.ul`
   @media (max-width: ${breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr;
     height: auto;
-    background-color: red;
     padding: 32px 32px 5rem 32px;
   }
 
