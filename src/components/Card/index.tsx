@@ -45,6 +45,7 @@ const Card = ({
       </S.Card>
       {showModalState && (
         <Modal
+          type="primary"
           onClose={closeModal}
           banner={banner}
           description={description ?? ''}

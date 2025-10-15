@@ -3,6 +3,7 @@ import { breakpoints } from '../../styles'
 
 export const List = styled.ul`
   width: 100%;
+  height: 77vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 16rem;
