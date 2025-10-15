@@ -9,7 +9,7 @@ import { ContentTitle, Description } from '../../styles'
 import * as S from './styles'
 
 type Props = {
-  type: 'primary' | 'secondary'
+  type?: 'primary' | 'secondary'
   banner: string
   title: string
   subcategory?: Subcategory[]

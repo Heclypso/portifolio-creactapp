@@ -8,6 +8,7 @@ import Projects from '../../containers/ProjectsList'
 import { setScrollY } from '../../store/reducers/sidebar'
 
 import { projects } from '../../data/projects'
+import TasksList from '../../containers/TasksList'
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -32,7 +33,13 @@ const Home = () => {
   return (
     <main ref={mainRef}>
       <About />
-      <Projects type="primary" repos={favoriteProjects} />
+      <Projects
+        to="/projects"
+        title="Projetos"
+        type="primary"
+        repos={favoriteProjects}
+      />
+      <TasksList />
       <Experiences />
     </main>
   )

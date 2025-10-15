@@ -38,6 +38,11 @@ const EstiloGlobal = createGlobalStyle`
     min-height: 100vh;
     scroll-snap-align: start;
     padding: 32px;
+
+    @media(max-width: ${breakpoints.desktop}) {
+        min-height: auto;
+
+    }
   }
 
   #about {

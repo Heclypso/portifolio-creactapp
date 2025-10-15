@@ -4,7 +4,7 @@ import Modal from '../Modal'
 
 import { useTheme } from 'styled-components'
 
-import { experiences } from '../../data/experience'
+import { experiences } from '../../data/experiences'
 
 import Title from '../Title'
 import * as S from './styles'

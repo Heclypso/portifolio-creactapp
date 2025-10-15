@@ -11,11 +11,12 @@ export const List = styled.ul`
 
   @media (max-width: ${breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr;
-    height: auto;
+    height: 60vh;
     padding: 32px 32px 5rem 32px;
   }
 
   @media (max-width: ${breakpoints.mobile}) {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 32px;

@@ -4,7 +4,7 @@ import { Props } from '.'
 import { Title } from '../../components/Title/styles'
 import { breakpoints } from '../../styles'
 
-export const List = styled.ul<Omit<Props, 'repos'>>`
+export const List = styled.ul<Pick<Props, 'type'>>`
   height: ${({ type }) => (type === 'primary' ? '80vh' : 'auto')};
   display: grid;
   grid-template-columns: 1fr 1fr;

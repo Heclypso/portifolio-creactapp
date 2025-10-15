@@ -7,14 +7,16 @@ import * as S from './styles'
 export type Props = {
   repos: Project[]
   type: 'primary' | 'secondary'
+  title: string
+  to?: string
 }
 
-const ProjectsList = ({ repos, type }: Props) => {
+const ProjectsList = ({ repos, type, title, to }: Props) => {
   return (
     <section id="projects">
-      <Title>Projetos</Title>
-      {type === 'primary' && (
-        <S.LinkElement to={'/projects'}>Ver todos</S.LinkElement>
+      <Title>{title}</Title>
+      {type === 'primary' && to && (
+        <S.LinkElement to={to}>Ver mais</S.LinkElement>
       )}
       <S.List type={type}>
         {repos.map((project: Project) => (
