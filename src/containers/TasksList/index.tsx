@@ -16,6 +16,7 @@ const TasksList = () => {
       to="/tasks"
       title="Atividades"
       type="primary"
+      cardType="secondary"
       repos={filteredTasks}
     />
   )

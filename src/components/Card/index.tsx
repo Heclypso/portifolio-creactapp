@@ -10,6 +10,7 @@ import * as S from './styles'
 type Props = {
   title: string
   banner: string
+  type: 'primary' | 'secondary'
   html_url_github?: string
   html_url_vercel?: string
   description?: string
@@ -18,6 +19,7 @@ type Props = {
 const Card = ({
   title,
   banner,
+  type,
   html_url_github,
   html_url_vercel,
   description
@@ -37,7 +39,11 @@ const Card = ({
       <S.Card
         onClick={modalHandler}
         style={{
-          background: `linear-gradient(${theme.overlayPrimaryColor}) , url(${banner}) no-repeat center`,
+          background: `linear-gradient(${
+            type === 'primary'
+              ? theme.overlayPrimaryColor
+              : theme.overlaySecondaryColor
+          }) , url(${banner}) no-repeat center`,
           backgroundSize: 'cover'
         }}
       >

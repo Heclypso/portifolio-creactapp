@@ -37,6 +37,7 @@ const Home = () => {
         to="/projects"
         title="Projetos"
         type="primary"
+        cardType="primary"
         repos={favoriteProjects}
       />
       <TasksList />

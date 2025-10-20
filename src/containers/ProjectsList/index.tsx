@@ -7,11 +7,12 @@ import * as S from './styles'
 export type Props = {
   repos: Project[]
   type: 'primary' | 'secondary'
+  cardType?: 'primary' | 'secondary'
   title: string
   to?: string
 }
 
-const ProjectsList = ({ repos, type, title, to }: Props) => {
+const ProjectsList = ({ repos, type, cardType, title, to }: Props) => {
   return (
     <section id="projects">
       <Title>{title}</Title>
@@ -21,6 +22,7 @@ const ProjectsList = ({ repos, type, title, to }: Props) => {
       <S.List type={type}>
         {repos.map((project: Project) => (
           <Card
+            type={cardType === 'primary' ? 'primary' : 'secondary'}
             key={project.id}
             title={project.name}
             banner={project.banner}

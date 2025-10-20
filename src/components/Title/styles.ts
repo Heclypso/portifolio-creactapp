@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Props } from '.'
 import { breakpoints } from '../../styles'
 
-export const Title = styled.h3<Props>`
+export const Title = styled.h3<Omit<Props, 'children'>>`
   color: ${(props) =>
     props.type === 'secondary'
       ? props.theme.overlayTextColor
@@ -11,8 +11,8 @@ export const Title = styled.h3<Props>`
     fontSize && type === 'primary'
       ? fontSize + 'px'
       : type === 'secondary'
-      ? '40px'
-      : '20px'};
+      ? '2rem'
+      : '1.4rem'};
   font-weight: 900;
   margin-bottom: ${({ $marginBottom, type }) =>
     $marginBottom && type === 'primary'
@@ -21,6 +21,7 @@ export const Title = styled.h3<Props>`
       ? ''
       : '32px'};
   text-align: center;
+  width: ${({ type }) => (type === 'secondary' ? '90%' : '')};
 
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${({ fontSize, type }) =>
