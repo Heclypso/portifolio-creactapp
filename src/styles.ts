@@ -1,7 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-import { Theme } from './themes/dark'
-
 export const breakpoints = {
   desktop: '1024px',
   mobile: '768px'
@@ -18,7 +16,7 @@ const EstiloGlobal = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => (props.theme as Theme).primaryColor};
+    background-color: ${(props) => props.theme.primaryColor};
   }
 
   main {
@@ -26,6 +24,16 @@ const EstiloGlobal = createGlobalStyle`
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    scrollbar-color: ${(props) => props.theme.tertiaryTextColor} transparent;
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${(props) => props.theme.tertiaryTextColor};
+      border-radius: 10px;
+    }
 
     @media (max-width: ${breakpoints.desktop}) {
       height: auto;

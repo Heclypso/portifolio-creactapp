@@ -3,7 +3,7 @@ import { P } from './styles'
 
 export type Props = {
   children: ReactNode
-  type?: 'primary' | 'secondary'
+  type?: 'primary' | 'secondary' | 'tertiary'
   fontSize?: number
 }
 
